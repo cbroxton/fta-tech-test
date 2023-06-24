@@ -1,6 +1,8 @@
 import { Metadata } from 'next'
 import './globals.scss'
 import { Inter } from 'next/font/google'
+import { RefObject, createRef } from 'react'
+import Shell from '../components/shell/shell'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,9 +16,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const menuRef: RefObject<HTMLDivElement> = createRef<HTMLDivElement>();
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Shell>
+          {children}
+        </Shell>
+      </body>
     </html>
   )
 }
