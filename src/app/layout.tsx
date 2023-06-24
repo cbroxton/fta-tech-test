@@ -1,9 +1,10 @@
+import { Metadata } from 'next'
 import './globals.scss'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Logistics UK Tech Test',
   description: 'Tech test for Logisitics UK by Connor Broxton',
 }
