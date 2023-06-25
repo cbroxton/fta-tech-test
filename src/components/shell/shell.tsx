@@ -44,5 +44,5 @@ export default function Shell({ children }: { children: ReactNode }) {
             </div>
             {menuHidden && <div className="flex-1 p-2">{children}</div>}
         </div>
-    )
+    );
 }

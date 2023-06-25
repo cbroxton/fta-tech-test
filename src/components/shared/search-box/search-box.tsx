@@ -34,5 +34,5 @@ export default function SearchBox({
             placeholder={placeHolder}
             value={searchTerm} onChange={handleChange}
         />
-    )
+    );
 }

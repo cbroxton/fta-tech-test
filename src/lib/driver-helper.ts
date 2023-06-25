@@ -1,6 +1,6 @@
 // Wasn't sure on the folder/file naming convention for these classes, seems to be mixed opinions. Some use util instead of lib.
 
-import drivers from '../../data/drivers.json'
+import drivers from '../../data/drivers.json';
 import { Driver } from '../models/driver';
 import { DriverTrace } from '../models/driver-trace';
 
@@ -14,11 +14,8 @@ export class DriverHelper {
     static getDriverActivityTimes(driver: Driver): { [activityType: string]: number } {
         return driver.traces.reduce<{ [activityType: string]: number }>((activityTimes, trace) => {
             for (const activity of trace.activity) {
-                if (activityTimes[activity.type]) {
-                    activityTimes[activity.type] += activity.duration;
-                } else {
-                    activityTimes[activity.type] = activity.duration;
-                }
+                activityTimes[activity.type] ??= 0;
+                activityTimes[activity.type] += activity.duration;
             }
 
             return activityTimes;

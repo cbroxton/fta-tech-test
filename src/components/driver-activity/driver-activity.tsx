@@ -20,5 +20,5 @@ export default function DriverActivity({ drivers }: { drivers: Driver[] }) {
                 )
             })}
         </div>
-    )
+    );
 }

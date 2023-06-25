@@ -26,5 +26,5 @@ export default function Menu({ handleClickLink }: { handleClickLink?: () => void
                 </Link>
             ))}
         </div>
-    )
+    );
 }

@@ -23,5 +23,5 @@ export default function Home() {
         placeHolder="Search by name/reg"></SearchBox>
       <DriverActivity drivers={filteredDrivers}></DriverActivity>
     </>
-  )
+  );
 }

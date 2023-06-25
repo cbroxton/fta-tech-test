@@ -20,7 +20,7 @@ export default function DriverActivityDays({ traces }: { traces: DriverTrace[] }
         5,
         6,
         7
-    ]
+    ];
 
     return (
         <div className="grid grid-cols-7 gap-2">
@@ -31,5 +31,5 @@ export default function DriverActivityDays({ traces }: { traces: DriverTrace[] }
                 <span key={dayNumber} className={`h-4 w-4 border border-black ${traceDaysWithActivities[dayNumber] && 'bg-green-950'}`}></span>
             ))}
         </div>
-    )
+    );
 }
