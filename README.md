@@ -10,3 +10,7 @@ To run...
 npm install
 npm run dev
 ```
+
+To run test...
+
+`npm run test`
