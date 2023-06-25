@@ -26,19 +26,19 @@ export class DriverHelper {
     }
 
     static getTraceDaysWithActivities(traces: DriverTrace[]): { [day: number]: boolean } {
-        const days: { [day: number]: boolean } = {};
-
-        for (const trace of traces) {
+        return traces.reduce<{ [day: number]: boolean }>((days, trace) => {
             const timestamp = Date.parse(trace.date);
+
             if (!isNaN(timestamp)) {
                 const traceDate = new Date(timestamp);
                 days[traceDate.getDay()] = true;
             }
-        }
 
-        return days;
+            return days;
+        }, {});
     }
 
+    // search algorithm is pretty basic
     static filterDrivers(drivers: Driver[], searchTerm: string): Driver[] {
         searchTerm = searchTerm.toLocaleLowerCase();
 
