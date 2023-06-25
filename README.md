@@ -1,4 +1,4 @@
-Hey 👋 I'm Connor Broxton and this is my submission for the Logisitics UK technical test.
+Hey 👋 I'm Connor Broxton, full stack developer with around 8 years experience and this is my submission for the Logisitics UK technical test.
 
 The styling is pretty basic to save on time but have tried to include some examples of modern css practices. I've also enabled sass but ended up not using any aside from in `global.scss` 😆 as was experimenting with using [TailWind](https://tailwindcss.com/). I found it very useful but think there's probably still some areas that would be better written using custom css selectors.
 
