@@ -38,4 +38,13 @@ export class DriverHelper {
 
         return days;
     }
+
+    static filterDrivers(drivers: Driver[], searchTerm: string): Driver[] {
+        searchTerm = searchTerm.toLocaleLowerCase();
+
+        return drivers.filter(driver =>
+            `${driver.forename} ${driver.surname}`.toLocaleLowerCase().includes(searchTerm)
+                || driver.vehicleRegistration.toLocaleLowerCase().includes(searchTerm)
+        );
+    }
 }

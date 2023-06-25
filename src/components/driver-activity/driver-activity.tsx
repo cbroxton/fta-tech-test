@@ -2,9 +2,7 @@ import { DriverHelper } from "../../lib/driver-helper";
 import { Driver } from "../../models/driver";
 import DriverActivityDays from "./driver-activity-days/driver-activity-days";
 
-export default function DriverActivity() {
-    const drivers: Driver[] = DriverHelper.getDrivers();
-
+export default function DriverActivity({ drivers }: { drivers: Driver[] }) {
     return (
         <div className="flex flex-col gap-4">
             {drivers.map((driver: Driver) => {
